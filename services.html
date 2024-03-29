@@ -1,0 +1,351 @@
+<html>
+<head>
+	<title>HMS</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="style1.css">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<style >
+  body {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background-size: cover;
+}
+
+     .form-control {
+    border-radius: 0.75rem;
+}
+.enlarge-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff; /* Blue button color */
+            color: #ffffff; /* White text color */
+            border-radius: 50%; /* Rounded border */
+            transition: transform 0.3s ease-in-out; /* Transition for smooth effect */
+        }
+
+        .enlarge-button:hover {
+            transform: scale(1.1); /* Enlarge the button on hover */
+        }
+
+        .pulsate {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff; /* Blue button color */
+            color: #ffffff; /* White text color */
+            border-radius: 50%; /* Rounded border */
+            animation: pulsate 2s infinite; /* Pulsating animation */
+        }
+
+        @keyframes pulsate {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+</style>
+
+<script>
+    var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('cpassword').value) {
+    document.getElementById('message').style.color = '#5dd05d';
+    document.getElementById('message').innerHTML = 'Matched';
+  } else {
+    document.getElementById('message').style.color = '#f55252';
+    document.getElementById('message').innerHTML = 'Not Matching';
+  }
+}
+
+function alphaOnly(event) {
+  var key = event.keyCode;
+  return ((key >= 65 && key <= 90) || key == 8 || key == 32);
+};
+
+function checklen()
+{
+    var pass1 = document.getElementById("password");  
+    if(pass1.value.length<6){  
+        alert("Password must be at least 6 characters long. Try again!");  
+        return false;  
+  }  
+}
+
+</script>
+
+</head>
+
+<!------ Include the above in your HEAD tag ---------->
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-light text-dark" id="mainNav" >
+    <div class="container">
+
+      <a class="navbar-brand js-scroll-trigger text-dark" href="#" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp Jamy Hospital</h4></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="pulsate bg-success">Book Appointment</button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="margin-right: 40px;">
+            <a class="nav-link js-scroll-trigger text-dark" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
+          </li>
+  
+          <li class="nav-item" style="margin-right: 40px;">
+            <a class="nav-link js-scroll-trigger text-dark" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>ABOUT US</h6></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-dark" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="wrapper">
+
+<section id="intro" class="intro"  style="font-family: 'IBM Plex Sans', sans-serif;">
+      <div class="intro-content" style="padding-top: 75px;">
+        <br><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <!-- <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+                <h2 style="font-family: 'IBM Plex Sans', sans-serif;color: white">Jamy Hospital</h2>
+              </div> -->
+              <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+                <h4 class="h-light" style="font-family: 'IBM Plex Sans', sans-serif;color: #efe1e1">Provide best quality healthcare for you</h4>
+              </div>
+              <div class="well well-trans" style="background:#ffffff00;color: white">
+                <div class="wow fadeInRight" data-wow-delay="0.1s">
+
+                  <ul class="lead-list">
+                    <li><span class="fa fa-check-square-o fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly premium packages</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
+                    <li><span class="fa fa-check-square-o fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite services</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
+                    <li><span class="fa fa-check-square-o fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
+                  </ul>
+                  <p class="text-right wow bounceIn" data-wow-delay="0.4s">
+                    <a href="#" class="btn btn-skin btn-lg" style="background:white;color:#006ccf">Learn more <i class="fa fa-angle-right"></i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                <img src="img/dummy/img-5.png" class="img-responsive" alt="" style="height: 400px; width: 100%;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="boxes" class="home-section paddingtop-80" style="background: -webkit-linear-gradient(left, #3931af, #00c6ff);color: white;font-family: 'IBM Plex Sans', sans-serif;">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-3">
+            <div class="wow fadeInUp" data-wow-delay="0.3s">
+              <div class="box text-center">
+
+                <i class="fa fa-check fa-3x bg-skin"></i>
+                <h4>Make an appoinment</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <div class="wow fadeInUp" data-wow-delay="0.5s">
+              <div class="box text-center">
+
+                <i class="fa fa-list-alt fa-3x bg-skin"></i>
+                <h4>Choose your package</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <div class="wow fadeInUp" data-wow-delay="0.7s">
+              <div class="box text-center">
+                <i class="fa fa-user-md fa-3x bg-skin"></i>
+                <h4>Help by specialist</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3">
+
+            <div class="wow fadeInUp" data-wow-delay="0.9s">
+              <div class="box text-center">
+
+                <i class="fa fa-hospital-o fa-3x bg-skin"></i>
+                <h4>Get diagnostic report</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+  <section id="service" class="home-section nopadding paddingtop-60" style="background: -webkit-linear-gradient(left, #3931af, #00c6ff);color: white" style="height: 80%;" >
+  <div class="container">
+
+        <div class="row">
+          <div class="col-sm-6 col-md-6">
+            <div class="wow fadeInLeft" data-wow-delay="0.2s">
+              <img src="img/dummy/img-6.png" class="img-responsive" alt="" />
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3">
+
+            <div class="wow fadeInRight" data-wow-delay="0.1s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <span class="fa fa-stethoscope fa-3x" style="color:#0062cc"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Medical checkup</h5>
+                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wow fadeInRight" data-wow-delay="0.2s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <span class="fa fa-wheelchair fa-3x" style="color:#0062cc"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Nursing Services</h5>
+                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                </div>
+              </div>
+            </div>
+            <div class="wow fadeInRight" data-wow-delay="0.3s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <span class="fa fa-plus-square fa-3x" style="color:#0062cc"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Pharmacy</h5>
+                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-sm-3 col-md-3">
+
+            <div class="wow fadeInRight" data-wow-delay="0.1s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <span class="fa fa-h-square fa-3x" style="color:#0062cc"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Gyn Care</h5>
+                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wow fadeInRight" data-wow-delay="0.2s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <span class="fa fa-filter fa-3x" style="color:#0062cc"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Neurology</h5>
+                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                </div>
+              </div>
+            </div>
+            <div class="wow fadeInRight" data-wow-delay="0.3s">
+              
+              <div class="service-box">
+                <div class="service-icon">
+                  <span class="fa fa-heartbeat fa-3x"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Sleep Center</h5>
+                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-dark">
+      <div class="container">
+        <br><br>
+          <div class="row">
+              <div class="col-md-4">
+                  <h4>Vision</h4>
+                  <p>To provide accessible and high-quality healthcare services to every individual, regardless of their background or location.</p>
+              </div>
+              <div class="col-md-4">
+                  <h4>Mission</h4>
+                  <p>Our mission is to deliver compassionate care, innovate healthcare solutions, and empower communities to lead healthier lives.</p>
+              </div>
+              <div class="col-md-4">
+                  <h4>Follow Us</h4>
+                  <ul class="list-inline">
+                      <li class="list-inline-item h1"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li class="list-inline-item h1"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li class="list-inline-item h1"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <hr>
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <p class="text-muted">&copy;-2024"Your health is your wealth. Take care of it."</p>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/nivo-lightbox.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
