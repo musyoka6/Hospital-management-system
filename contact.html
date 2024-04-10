@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Contact Us</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -30,9 +33,83 @@
             border-top-right-radius: 10% 50%;
             border-bottom-right-radius: 10% 50%;
         }
+
+        .biggie {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            margin-top: 13rem;
+        }
+
+        .visiting {
+            background-color: maroon;
+            text-align: center;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            color: white;
+            padding: 0.8rem;
+            height: fit-content;
+        }
+
+
+        .map {
+            width: 100%;
+
+        }
+
+        .location {
+            text-align: center;
+            color: black;
+            background-color: rgb(80, 77, 77, 0.8);
+        }
+
+        .locs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 1rem 2rem;
+        }
+
+        .locs div {
+            text-align: left;
+
+        }
+
+        .bg {
+            background-color: papayawhip;
+            border-radius: 25px;
+            padding: 2rem;
+        }
+
+        .locs h3 {
+            color: brown;
+        }
+
+        @media screen and (max-width:1450px) {
+            .biggie {
+                width: 100vw !important;
+                grid-template-columns: unset;
+                grid-template-rows: 1fr 1fr;
+            }
+
+
+            .contact-form {
+                margin: unset;
+                width: 60% !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .locs {
+                grid-template-columns: unset;
+            }
+        }
     </style>
+
+
+
     <!DOCTYPE html>
     <html lang="en">
+
 
     <head>
         <meta charset="utf-8">
@@ -46,8 +123,9 @@
         <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-              rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet">
 
         <!-- Vendor CSS Files -->
         <link href="assets1/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -63,20 +141,24 @@
         <link href="assets1/css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+<body>
 
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex align-items-center fixed-top">
         <div class="container d-flex justify-content-between">
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-                <i class="bi bi-phone"></i> +254 700000000
+                <i class="bi bi-phone"></i> +254 759919455
             </div>
             <div class="d-none d-lg-flex social-links align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                <a href="https://twitter.com/home?lang=en" target="_blank" class="twitter" class="twitter"><i
+                        class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/james.nzoka.9/" target="_blank" class="facebook"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/musyokanzoka8020/" target="" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/mynetwork/" target="_blank" class="linkedin"><i
+                        class="bi bi-linkedin"></i></i></a>
             </div>
         </div>
     </div>
@@ -85,33 +167,41 @@
     <header id="header" class="fixed-top" style="background-color:maroon;">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a class="text-white" href="index.html">Jamy Hospital</a></h1>
+            <h1 class="logo me-auto "><a class="text-white" href="index.php">
+                    <img src="./images/logo.png" style="width:5rem;" /> <br>JAMY HOSPITAL
+                </a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active text-white" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto text-white" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto text-white" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto text-white" href="index.php">Home</a></li>
+                    <li><a class="nav-link scrollto text-white" href="index.php#about">About</a></li>
+                    <li><a class="nav-link scrollto text-white" href="index.php#services">Services</a></li>
                     <li><a class="nav-link scrollto text-white" href="index1.php">Patient</a></li>
                     <li><a class="nav-link scrollto text-white" href="doctorslogin.php">Doctors</a></li>
                     <li><a class="nav-link scrollto text-white" href="admin.php">Receptionist</a></li>
-                    <li><a class="nav-link scrollto text-white" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link scrollto active text-white" href="#">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
-            <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span>
+            <a href="pregister.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span>
                 Appointment</a>
 
         </div>
     </header><!-- End Header -->
+    <div>
+        <!-- <img src="../final project/images/map.jpg" style="width: 100%; height: 400px;" alt=""> -->
+    </div>
+    <!-- Replace YOUR_PLACE_ID and YOUR_API_KEY with your actual values -->
+</body>
 
 
+<div class="biggie">
     <div class="container contact-form" style="font-family: 'IBM Plex Sans', sans-serif;">
         <div class="contact-image">
-            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
         </div>
         <form method="post" action="contact.php">
             <h3>Drop Us a Message</h3>
@@ -119,113 +209,215 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value=""
-                               onkeydown="return alphaOnly(event);" required/>
+                            onkeydown="return alphaOnly(event);" required />
                     </div>
                     <div class="form-group">
                         <input type="email" name="txtEmail" class="form-control" placeholder="Your Email *" value=""
-                               required/>
+                            required />
                     </div>
                     <div class="form-group">
                         <input type="tel" name="txtPhone" class="form-control" placeholder="Your Phone Number *"
-                               value="" minlength="10" maxlength="10" required/>
+                            value="" minlength="10" maxlength="10" required />
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message"/>
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
-                                  style="width: 100%; height: 150px;" required></textarea>
+                            style="width: 100%; height: 150px;" required></textarea>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer" style="background-color:maroon;">
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Jamy</h3>
-                        <p>
-                            Nairobi <br>
-                            Kenya<br>
-                            <strong>Phone:</strong> +254 70000000<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Medical Surgary</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Opticals</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Baby Care</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Join Our Newsletter</h4>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-
-                </div>
-            </div>
+    <div>
+        <div class="visiting">
+            <img src="../final project/images/clock.png" style="width: 3rem;" alt="">
+            <h3>VISITING HOURS</h3>
+            <p>Monday-Sunday</p>
+            <hr>
+            <h4>Afternoon: 12:00pm - 1:00pm</h4>
+            <hr>
+            <h4>Evening: 2:00pm - 4:00pm</h4>
+            <hr>
+            <hr>
+            <h3>APPOINTMENTS</h3>
+            <hr>
+            <img src="../final project/images/call img.jpg" style="width: 3rem;" alt="">
+            <p>To book an appointment please call 0759919455 / 0720392575 or sendan e-mail to jammyhospital@nbihosp.org
+            </p><br>
         </div>
 
-        <div class="container d-md-flex py-4">
+    </div>
+</div>
+<div class="location">
+    <h1>LOCATION</h1>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3586905214!2d36.682579697185325!3d-1.302860280114727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1712049010619!5m2!1sen!2ske"
+        style="width: 100%; height: 50vh; border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+</div>
+</iframe>
 
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright text-white">
-                    &copy; Copyright <strong><span>Jamy</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits text-white">
+<div class="locs">
+    <div class="bg">
+        <h3>MAIN HOSPITAL</h3>
+        <p>Argwings Kodhek Road <br>
+            P.O.Box 30026 – 00100 <br>
+            Nairobi, Kenya <br>
+            Tel: +254 (0)20 2845000/ <br>
+            +254 (0)20 2846000 <br>
+            Mobile: +254 (0)703 082000/ <br>
+            +254 (0)730 666000 <br>
+            Email: hosp@nbihosp.org</p> <br>
+        <hr> <br>
+        <h3>CUSTOMER SERVICES</h3> <br>
+        <p>Tel/WhatsApp: +254 (0) 110922834 <br>
+            Email: customer.service@nbihosp.org</p>
 
-                    Designed by <a href="#">Jamy Hospital</a>
+
+    </div>
+    <div class="bg">
+        <h3>ANDERSON SPECIALTY CLINICS</h3>
+        <p>The Nairobi Hospital, Argwings Kodhek Road <br>
+            Anderson Centre, 1st Floor <br>
+            Tel: +254 (0)730 666860/1/2/7 <br>
+            +254 (0) 703 082000 <br>
+            Email: Andersonclinics@nbihosp.org<br>
+        </p>
+        <hr> <br>
+        <h3>CECILY MCDONELL COLLEGE OF HEALTH SCIENCES</h3> <br>
+        <p>The Nairobi Hospital, Argwings Kodhek Road <br>
+            Anderson Centre, 9th Floor <br>
+            Tel: +254 (0) 730666854/ <br>
+            +254 (0) 703 082000 <br>
+            +254 (0)20 2846854 <br>
+            Email: schoolofnursing@nbihosp.org
+        </p>
+    </div>
+    <div class="bg">
+        <h3>CONVENTION CENTRE</h3>
+        <p>The Nairobi Hospital, Argwings Kodhek Road <br>
+            Anderson Centre, 2nd Floor <br>
+            Tel: +254 (0) 730 666888/ <br>
+            +254 (0)703 082000 <br>
+            Email: conventioncentre@nbihosp.org</p> <br>
+        <hr> <br>
+        <h3>CONVENTION CENTRE</h3> <br>
+        <p>The Nairobi Hospital, Argwings Kodhek Road <br>
+            Anderson Centre, 2nd Floor <br>
+            Tel: +254 (0) 730 666888/ <br>
+            +254 (0)703 082000 <br>
+            Email: conventioncentre@nbihosp.org</p>
+    </div>
+</div>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" style="background-color:maroon;">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Jamy</h3>
+                    <p>
+                        Nairobi <br>
+                        Kenya<br>
+                        <strong>Phone:</strong> +254 70000000<br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
                 </div>
-            </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Patient</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Medical Surgary</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Opticals</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Baby Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </div>
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <div class="container d-md-flex py-4">
 
-    <!-- Vendor JS Files -->
-    <script src="assets1/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets1/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets1/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets1/vendor/php-email-form/validate.js"></script>
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright text-white">
+                &copy; Copyright <strong><span>Jamy</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits text-white">
 
-    <!-- Template Main JS File -->
-    <script src="assets1/js/main.js"></script>
+                Designed by <a href="#">Jamy Hospital</a>
+            </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="https://twitter.com/home?lang=en" target="_blank" class="twitter"><i
+                    class="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com/james.nzoka.9/" target="_blank" class="facebook"><i
+                    class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/musyokanzoka8020/" target="_blank" class="instagram"><i
+                    class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="https://wa.me/0720392575" target="_blank" class="linkedin"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="1em" height="1em" viewBox="0 0 256 258">
+                    <defs>
+                        <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                            <stop offset="0%" stop-color="#1faf38" />
+                            <stop offset="100%" stop-color="#60d669" />
+                        </linearGradient>
+                        <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                            <stop offset="0%" stop-color="#f9f9f9" />
+                            <stop offset="100%" stop-color="#fff" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#logosWhatsappIcon0)"
+                        d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a122.994 122.994 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+                    <path fill="url(#logosWhatsappIcon1)"
+                        d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+                    <path fill="#fff"
+                        d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561c0 15.67 11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716c-3.186-1.593-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+                </svg></a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
 
-    </body>
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-    </html>
+<!-- Vendor JS Files -->
+<script src="assets1/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets1/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets1/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets1/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets1/js/main.js"></script>
+
+</body>
+
+</html>

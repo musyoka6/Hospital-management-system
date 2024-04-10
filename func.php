@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost", "makbe", "makbe02", "myhmsdb");
+$con = mysqli_connect("localhost", "root", "", "myhmsdb");
 
 if (isset($_POST['patsub'])) {
 	$email = $_POST['email'];
@@ -19,11 +19,10 @@ if (isset($_POST['patsub'])) {
 		}
 		header("Location:admin-panel.php");
 	} else {
-		echo("<script>alert('Invalid Username or Password. Try Again!');
+		echo ("<script>alert('Invalid Username or Password. Try Again!');
           window.location.href = 'index1.php';</script>");
 		// header("Location:error.php");
 	}
-
 }
 if (isset($_POST['update_data'])) {
 	$contact = $_POST['contact'];
@@ -217,5 +216,3 @@ function display_admin_panel()
   </body>
 </html>';
 }
-
-?>

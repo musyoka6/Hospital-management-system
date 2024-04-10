@@ -1,6 +1,6 @@
 <?php
-$con = mysqli_connect("localhost", "makbe", "makbe02", "myhmsdb");
-$connection = mysqli_connect("localhost", "makbe", "makbe02", "myhmsdb");
+$con = mysqli_connect("localhost", "root", "", "myhmsdb");
+$connection = mysqli_connect("localhost", "root", "", "myhmsdb");
 
 function add_appointment($pid, $fname, $lname, $gender, $email, $contact, $doctor, $docFees, $appdate, $apptime): bool
 {

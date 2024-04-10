@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
 
   date_default_timezone_set('Africa/Nairobi');
 
@@ -10,8 +10,8 @@ if(isset($_POST['submit'])){
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
   $BusinessShortCode = '174379';
-  $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
-  
+  $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
+
   /*
     This are your info, for
     $PartyA should be the ACTUAL clients phone number or your phone number, format 2547********
@@ -21,17 +21,17 @@ if(isset($_POST['submit'])){
     actually deducted from a clients side/your test phone number once the PIN has been entered to authorize the transaction. 
     for developer/test accounts, this money will be reversed automatically by midnight.
   */
-  
+
   $PartyA = $_POST['phone']; // This is your phone number, 
   $AccountReference = 'JamyHospital';
   $TransactionDesc = 'Test Payment';
   $Amount = $_POST['amount'];
- 
+
   # Get the timestamp, format YYYYmmddhms -> 20181004151020
-  $Timestamp = date('YmdHis');    
-  
+  $Timestamp = date('YmdHis');
+
   # Get the base64 encoded string -> $password. The passkey is the M-PESA Public Key
-  $Password = base64_encode($BusinessShortCode.$Passkey.$Timestamp);
+  $Password = base64_encode($BusinessShortCode . $Passkey . $Timestamp);
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
@@ -41,21 +41,21 @@ if(isset($_POST['submit'])){
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
   # callback url
-  $CallBackURL = 'https://darajampesa.herokuapp.com/callback_url.php';  
+  $CallBackURL = 'https://darajampesa.herokuapp.com/callback_url.php';
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
   curl_setopt($curl, CURLOPT_HEADER, FALSE);
-  curl_setopt($curl, CURLOPT_USERPWD, $consumerKey.':'.$consumerSecret);
+  curl_setopt($curl, CURLOPT_USERPWD, $consumerKey . ':' . $consumerSecret);
   $result = curl_exec($curl);
   $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
   $result = json_decode($result);
-  $access_token = $result->access_token;  
+  $access_token = $result->access_token;
   curl_close($curl);
 
   # header for stk push
-  $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
+  $stkheader = ['Content-Type:application/json', 'Authorization:Bearer ' . $access_token];
 
   # initiating the transaction
   $curl = curl_init();
@@ -91,12 +91,11 @@ if(isset($_POST['submit'])){
     $handle = fopen($file, 'a');
     fputcsv($handle, $csv_data);
     fclose($handle);
-
     // Display success message
-    echo "Successfully paid. Transaction details saved.";
+    echo "<h4> Successfully paid. Transaction details saved.</h4>";
 
     // Provide link to homepage
-    echo '<br><a class="text-center" href="admin-panel.php">Go to homepage</a>';
+    echo '<br> <br><a class="text-center btn btn-danger text-white" href="admin-panel.php">Go to homepage</a>';
   } else {
     echo "Error";
   }
@@ -107,6 +106,7 @@ if(isset($_POST['submit'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,10 +116,10 @@ if(isset($_POST['submit'])){
   <!-- Custom CSS -->
   <style>
     body {
-    /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
-    background-size: cover;
-    background-image: url(images/ku.avif);
-}
+      /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+      background-size: cover;
+      background-image: url(images/ku.avif);
+    }
 
     .container {
       background-color: #fff;
@@ -127,11 +127,13 @@ if(isset($_POST['submit'])){
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     h2 {
       color: #007bff;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h2>Paid Transactions</h2>
@@ -164,4 +166,5 @@ if(isset($_POST['submit'])){
     </table>
   </div>
 </body>
+
 </html>

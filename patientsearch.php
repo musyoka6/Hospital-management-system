@@ -7,11 +7,11 @@
 </head>
 <body>
 <?php
-include("newfunc.php");
-if(isset($_POST['patient_search_submit']))
-{
+$con=mysqli_connect("localhost","root","","myhmsdb");
+
+if(isset($_POST['patient_search_submit'])) {
 	$contact=$_POST['patient_contact'];
-	$query = "select * from patreg where contact= '$contact'";
+	$query = "select * from patreg where contact='$contact'";
   $result = mysqli_query($con,$query);
   $row=mysqli_fetch_array($result);
   if($row['lname']=="" & $row['email']=="" & $row['contact']=="" & $row['password']==""){

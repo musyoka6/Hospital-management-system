@@ -7,7 +7,8 @@
 </head>
 <body>
 <?php
-include("newfunc.php");
+$con=mysqli_connect("localhost","root","","myhmsdb");
+
 if(isset($_POST['mes_search_submit']))
 {
 	$contact=$_POST['mes_contact'];
